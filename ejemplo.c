@@ -2,6 +2,6 @@
 #include "figures.h"
 
 void display(){
-  char** whiteSquare = repeatH(whiteSquare, 8);
-  interpreter(whiteSquare);
+  char** whitebishop = reverse(whitebishop);
+  interpreter(whitebishop);
 }
