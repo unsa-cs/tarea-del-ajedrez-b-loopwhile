@@ -2,6 +2,6 @@
 #include "figures.h"
 
 void display(){
-  char** blackSquare = reverse(whiteSquare);
-  interpreter(blackSquare);
+  char** kingRepetido = repeatH(king, 10);
+  interpreter(kingRepetido);
 }
