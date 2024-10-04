@@ -2,6 +2,7 @@
 #include "figures.h"
 
 void display(){
-  char** whiteRepetido = repeatH(whiteSquare, 10);
-  interpreter(whiteRepetido);
+  char ** joinFigures = join(whiteSquare, reverse(whiteSquare));
+  char** whiteGray = repeatH(joinFigures, 4);
+  interpreter(whiteGray);
 }
