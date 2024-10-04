@@ -2,7 +2,11 @@
 #include "figures.h"
 
 void display(){
-  char ** joinFigures = join(whiteSquare, reverse(whiteSquare));
-  char** whiteGray = repeatH(joinFigures, 4);
-  interpreter(whiteGray);
+  char** blackSquare = reverse(whiteSquare);
+  char** joinFigures1 = join(whiteSquare, blackSquare);
+  char** joinFigures2 = join(blackSquare, whiteSquare);
+  char** firstRow = repeatH(joinFigures1, 4);
+  char** lastRow = repeatH(joinFigures2, 4);
+  char** sobreponer = up(firstRow, lastRow);
+  interpreter(sobreponer);
 }
