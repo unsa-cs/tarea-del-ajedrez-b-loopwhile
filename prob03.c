@@ -6,6 +6,8 @@ void display(){
   char** joinFigures = join(blackSquare, whiteSquare);
   char** row = repeatH(joinFigures, 4);
   char** reverseRow = reverse(row);
-  char** upProof =  up(row, reverseRow);
-  interpreter(upProof);
+  char** upRows = up(row, reverseRow);
+
+  char** repeatUpRows =  repeatV(upRows, 2);
+  interpreter(repeatUpRows);
 }
