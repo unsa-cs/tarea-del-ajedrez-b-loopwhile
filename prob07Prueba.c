@@ -8,6 +8,8 @@ void display(){
   char** knightSquare = superImpose(knightsOne, one);
  
   char ** knightSquareFlip = flipV(knightSquare);
-  char ** unionn = join(knightSquare,knightSquareFlip);
+  char ** part2 = join(knightSquareFlip, one);
+  char ** part1 = join(one, knightSquare);
+  char ** unionn = join(part1,part2);
   interpreter(unionn);
 }
