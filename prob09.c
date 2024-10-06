@@ -20,7 +20,9 @@ void display(){
       squareStart = reverse(squareStart);
       row = join(row, squareStart);
     }
+    if(board == NULL) board = row;
+    else board = up(board, row);
   }
-  interpreter(row);
+  interpreter(board);
 }
 
