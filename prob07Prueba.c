@@ -5,6 +5,8 @@ void display(){
   
   char** one  = join(whiteSquare, reverse(whiteSquare));
   char** knightsOne = join(knight, rotateR(knight));
-  char** kightSquare = superImpose(knightsOne, one);
-  interpreter(kightSquare);
+  char** knightSquare = superImpose(knightsOne, one);
+ 
+  char ** knightSquareFlip = flipV(knightSquare);
+  interpreter(knightSquareFlip);
 }
