@@ -11,7 +11,7 @@ void display(){
   char** emptyPlace = repeatFigures;  
   emptyPlace = repeatV(up(emptyPlace, reverse(emptyPlace)), 2);
   char** boardFinal = up(whitePlace, emptyPlace);
-  char** blackPlace = rotateR(rotateR(whitePlace));
-  boardFinal = up(boardFinal, reverse(blackPlace));
+  char** blackPlace = whitePlace;
+  boardFinal = up(boardFinal, flipH(reverse(blackPlace)));
   interpreter(boardFinal);
 }
