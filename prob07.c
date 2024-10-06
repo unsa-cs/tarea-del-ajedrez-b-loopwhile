@@ -19,6 +19,6 @@ void display(){
   char** final = superImpose(joinKnights1,repeatFigures);
   char** unir1 = up(final, boardFinal);
   char** final2 = superImpose(joinKnights2, repeatFigures);
-  char** tablero = up(unir1, joinKnights2);
+  char** tablero = up(unir1,reverse(final2));
   interpreter(tablero);
 }
