@@ -27,11 +27,11 @@ void display(){
       squareStart = reverse(blackSquare);
       row = squareStart;
     }
-    if(i==3) {
-      row = superImpose(queen, squareStart);
-    }
     for(int j=1; j<8; j++){
       squareStart = reverse(squareStart);
+      if(i==3 && j==2) {
+        squareStart = superImpose(queen, squareStart);
+      }
       row = join(row, squareStart);
     }
     if(board == NULL) board = row;
