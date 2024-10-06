@@ -3,18 +3,15 @@
 #include <stdio.h>
 
 struct Piezas{
-  char piece;
+  char** piece;
   int fila;
   int columna;
 };
 
 void display(){
   struct Piezas piezas[16] = {
-    {'q', 0, 5},
-    {'k', 0, 7},
-    {'t', 1, 3},
-    {'t', 1, 5},
-    {'p', 2, 5}
+    {queen, 0, 5},
+    {king, 0, 7}
   };
   char** blackSquare = reverse(whiteSquare);
   char** squareStart = NULL;
@@ -29,6 +26,9 @@ void display(){
     else{
       squareStart = reverse(blackSquare);
       row = squareStart;
+    }
+    if(i==3) {
+      row = superImpose(queen, squareStart);
     }
     for(int j=1; j<8; j++){
       squareStart = reverse(squareStart);
