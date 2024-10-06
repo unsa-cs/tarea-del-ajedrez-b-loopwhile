@@ -16,6 +16,6 @@ void display(){
   char** joinKnights = join(join(join(join(join(knight1, knight2), knight3), knight),joinFigures),joinFigures);
 
   char** final = superImpose(joinKnights,repeatFigures);
-  char** tablero = up(final, boardFinal);
+  char** tablero = up(final, reverse(boardFinal));
   interpreter(tablero);
 }
