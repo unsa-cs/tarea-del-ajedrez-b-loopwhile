@@ -10,7 +10,7 @@ void display(){
   char** combinePawn = repeatH(pawn, 8);
   char** whitePlace = superImpose(up(combineRow, combinePawn), figuresPlace);
   char** blackPlace = superImpose(reverse(up(combinePawn,combineRow)), figuresPlace);
-  char** emptyPlace = repeatH(figuresPlace,2);
+  char** emptyPlace = repeatV(figuresPlace,2);
   char** boardFinal = up(up(whitePlace, emptyPlace), blackPlace);
   interpreter(boardFinal);
 }
