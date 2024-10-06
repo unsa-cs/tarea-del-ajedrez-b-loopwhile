@@ -15,7 +15,7 @@ void display(){
   char** knight4 = rotateL(knight3);
   char** joinKnights = join(join(join(join(join(knight1, knight2), knight3), knight),joinFigures),joinFigures);
 
-  char** final = superImpose(joinKnights,boardFinal);
-
-  interpreter(final);
+  char** final = superImpose(joinKnights,repeatFigures);
+  char** tablero = up(final, boardFinal);
+  interpreter(tablero);
 }
