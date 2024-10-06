@@ -9,8 +9,6 @@ void display(){
   char** reverseCombineRow = combineRow;
   char** whitePlace = up(reverseCombineRow, superImpose(repeatH(pawn, 8), reverse(repeatFigures)));
   char** emptyPlace = repeatFigures;  
-  for(int i = 0; i < 3; i++){
-    emptyPlace = up(emptyPlace, reverse(emptyPlace));
-  }
+  emptyPlace = repeatV(up(emptyPlace, reverse(emptyPlace)), 2);
   interpreter(up(whitePlace, emptyPlace));
 }
