@@ -13,9 +13,12 @@ void display(){
   char** knight2 = rotateL(knight1);
   char** knight3 = rotateL(knight2);
   char** knight4 = rotateL(knight3);
-  char** joinKnights = join(join(join(join(knight1, joinFigures), joinFigures), joinFigures), knight2);
+  char** joinKnights1 = join(join(join(join(knight1, joinFigures), joinFigures), joinFigures), knight2);
+  char** joinKnights2 = join(join(join(join(knight3, joinFigures), joinFigures), joinFigures), knight4);
 
-  char** final = superImpose(joinKnights,repeatFigures);
-  char** tablero = up(final, boardFinal);
+  char** final = superImpose(joinKnights1,repeatFigures);
+  char** unir1 = up(final, boardFinal);
+  char** final2 = superImpose(joinKnights2, repeatFigures);
+  char** tablero = up(unir1, joinKnights2);
   interpreter(tablero);
 }
