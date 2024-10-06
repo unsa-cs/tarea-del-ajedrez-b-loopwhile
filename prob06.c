@@ -10,5 +10,8 @@ void display(){
   char** whitePlace = up(reverseCombineRow, superImpose(repeatH(pawn, 8), reverse(repeatFigures)));
   char** emptyPlace = repeatFigures;  
   emptyPlace = repeatV(up(emptyPlace, reverse(emptyPlace)), 2);
-  interpreter(up(whitePlace, emptyPlace));
+  char** boardFinal = up(whitePlace, emptyPlace);
+  char** blackPlace = rotateR(whitePlace);
+  boardFinal = up(boardFinal, blackPlace);
+  interpreter(boardFinal);
 }
